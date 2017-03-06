@@ -1,0 +1,278 @@
+<html>
+	<head>
+		<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<META content="MSHTML 6.00.2900.2769" name=GENERATOR>
+		<META content="Universitas Kristen Krida Wacana" name=author>
+		<META content=index,follow name=robots>
+		<META content="" name=description>
+		<META content="UKRIDA, Universitas Kristen Krida Wacana" name=keywords />
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css"/>
+
+		<script language="JavaScript" type="text/javascript" src="assets/js/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="assets/js/jquery.ui.js"></script>
+		<script language="JavaScript" type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="admin.js"></script>
+		
+		<title>UTV Device Management</title>
+	</head>
+	<body>
+		<div class="main">
+			<div class="col-md-6">
+				<h3>Device</h3>
+				<div class="row col-md-12">
+					<div class="col-md-3">
+						<b>IP Address</b>
+					</div>
+					<div class="col-md-6">
+						<b>Device Name</b>
+					</div>
+					<div class="col-md-1">
+						<b>URL Number</b>
+					</div>
+				</div>
+				<div id="device"></div>
+				<button type="button" data-toggle="modal" data-target="#addDeviceModal" class="btn btn-primary" id="addDevice">Add Device</button>
+			</div>
+			<div class="col-md-5">
+				<h3>URL</h3>
+				<div class="row">
+					<div class="col-md-2">
+						<b>URL Number</b>
+					</div>
+					<div class="col-md-4">
+						<b>URL</b>
+					</div>
+				</div>
+				<div id="url"></div>
+				<button type="button" data-toggle="modal" data-target="#addURLModal" class="btn btn-primary" id="addURL">Add URL</button>
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="addDeviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Add Device</h4>
+					</div>
+					<div class="modal-body">
+						<form id="formAddDevice">
+							<label>IP Address</label>
+							<input class="form-control" type="text" name="ipAddress"/>
+							<label>Device Name</label>
+							<input class="form-control" type="text" name="name"/>
+							<label>URL Number</label>
+							<select class="form-control urlnumber" name="status"></select>
+							<div class="row">
+								<div class="col-md-8"></div>
+								<div class="col-md-4">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary" id="btnAddDevice">Add</button>	
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="addURLModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Add URL</h4>
+					</div>
+					<div class="modal-body">
+						<form id="formAddURL">
+							<label>URL</label>
+							<input class="form-control" type="text" name="url"/>
+							<div class="row">
+								<div class="col-md-8"></div>
+								<div class="col-md-4">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary" id="btnAddURL">Add</button>	
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="messageLabel"></h4>
+					</div>
+					<div class="modal-body" id="messageContent">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="deviceTemplate" class="hidden">
+			<div class="col-md-3 ipAddress"></div>
+			<div class="col-md-6"><a class="deviceName" data-toggle="modal"></a></div>
+			<div class="col-md-1 status"></div>
+			<div class="col-md-2">
+				<a class="btn btn-sm btn-primary refreshDevice" title="Refresh browser">
+					<span class="glyphicon glyphicon-refresh"></span>
+				</a>
+				<a class="btn btn-sm btn-primary restartDevice" title="Restart Device">
+					<span class="glyphicon glyphicon-repeat"></span>
+				</a>
+				<a class="btn btn-sm btn-primary shutdownDevice" title="Shutdown Device">
+					<span class="glyphicon glyphicon-off"></span>
+				</a>
+				<a class="btn btn-sm btn-primary deleteDevice" title="Delete device" data-toggle="modal" data-target="">
+					<span class="glyphicon glyphicon-trash"></span>
+				</a>
+			</div>
+			
+			<!-- Modal -->
+			<div class="modal fade editDeviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" id="myModalLabel">Edit Device</h4>
+						</div>
+						<div class="modal-body">
+							<form class="formEditDevice">
+								<input class="form-control idText" type="hidden" name="idUpdate"/>	
+								<label>IP Address</label>
+								<input class="form-control ipAddressText" type="text" name="ipAddressUpdate"/>
+								<label>Device Name</label>
+								<input class="form-control deviceNameText" type="text" name="nameUpdate"/>
+								<label>Device Status</label>
+								<select class="form-control statusSelected" name="statusUpdate"></select>
+								<div class="row">
+									<div class="col-md-8"></div>
+									<div class="col-md-4">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary btnEditDevice">Save</button>	
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Modal -->
+			<div class="modal fade deleteDeviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" id="myModalLabel">Delete Device</h4>
+						</div>
+						<div class="modal-body">
+							Do you want to delete device with IP Address <b><div class="ipAddress"></div></b>
+							<form class="formDeleteDevice">
+								<input class="form-control idText" type="hidden" name="id"/>
+								<div class="row">
+									<div class="col-md-8"></div>
+									<div class="col-md-4">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary btnDeleteDevice">Delete</button>	
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="urlTemplate" class="hidden">
+			<div class="col-md-2 urlStatus"></div>
+			<div class="col-md-5"><a class="urlText" data-toggle="modal"></a></div>
+			<div class="col-md-5">
+				<a class="btn btn-sm btn-primary deleteURL" data-toggle="modal" data-target="">
+					<span class="glyphicon glyphicon-trash"></span>
+				</a>
+			</div>
+			
+			<!-- Modal -->
+			<div class="modal fade editURLModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" id="myModalLabel">Edit URL</h4>
+						</div>
+						<div class="modal-body">
+							<form class="formEditURL">
+								<label>URL Status</label>
+								<p class="urlStatus"></p>
+								<input class="form-control urlStatusValue" type="hidden" name="id"/>
+								<label>URL Text</label>
+								<input class="form-control urlTextValue" type="text" name="url"/>
+								<div class="row">
+									<div class="col-md-8"></div>
+									<div class="col-md-4">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary" id="btnEditURL">Save</button>	
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade deleteURLModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" id="myModalLabel">Delete URL</h4>
+						</div>
+						<div class="modal-body">
+							Do you want to delete URL <b><div class="urlText"></div></b>
+							<form class="formDeleteURL">
+								<input class="form-control urlStatusValue" type="hidden" name="id"/>
+								<div class="row">
+									<div class="col-md-8"></div>
+									<div class="col-md-4">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary" id="btnDeleteURL">Save</button>	
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

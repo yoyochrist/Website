@@ -1,0 +1,12 @@
+{
+  "userapid": true,
+  "host": "localhost",
+  "port": 5433,
+  "user": "postgres",
+  "password": "ukrida",
+  "rapiddb": "rcfg",
+  "rapidid": "default",
+  "suser": "admin",
+  "spwd": "",
+  "isnew": true
+}

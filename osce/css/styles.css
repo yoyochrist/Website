@@ -1,0 +1,236 @@
+/* CSS Document */
+
+
+
+html,body {
+	height: 100%;
+}
+
+
+.clearfix {
+    display: block;
+}
+
+
+
+#login{
+}
+
+
+#login-top{
+	margin-top: 80px;
+	text-align: center;
+}
+
+#login-bottom{
+	
+}
+
+
+.login-panel {
+	margin: 0px auto;
+    max-width: 380px;
+    text-align: center;
+    
+}
+
+
+.login-text {
+    color: #999;
+    margin: 0px 0px 20px;
+    text-align: center;
+}
+
+.search-panel {
+	margin: 60px 0px 0px;
+    max-width: 380px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+.panel-heading {
+	width: 100%;
+	color: #333;
+	background-color: #F5F5F5;
+	padding: 5px 15px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border: 1px solid #DDD;
+}
+
+
+
+.panel-title {
+    margin: 2px 0px;
+    font-size: 16px;
+    color: inherit;
+}
+
+.panel-body {
+	border: 1px solid #DDD;
+	display: table;
+	width: 100%;
+	color: #333;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+
+
+fieldset {
+	min-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px none;
+}
+
+
+.form-group {
+    margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+.form-control:focus {
+    border-color: #66AFE9;
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);
+}
+
+
+.panel-body .checkbox {
+    margin-top: 14px;
+	margin-bottom: 15px;
+	text-align: left;
+	margin-left: 12px;
+	font-size: 13px;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.panel-body .buttons {
+    margin: 0px;
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+
+
+.buttons {
+    margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+.buttons .btn {
+    display: block;
+    font-size: 14px;
+	padding: 8px 10px;
+    text-transform: uppercase;
+    width: 100%;
+	border-radius: 3px;
+}
+
+
+.btn2 {
+    font-size: 14px;
+	padding: 4px 12px;
+	border-radius: 3px;
+}
+
+
+
+
+.btn-success {
+    color: #FFF;
+    background-color: #0C79C3;
+    border-color: #006db0;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
+    color: #FFF;
+    background-color: #006db0;
+    border-color: #006db0;
+}
+
+
+.text-logo{
+	margin: 30px 0px 0px;
+}
+
+
+.center{
+	margin: auto;
+	text-align: center;
+
+}
+
+
+
+.clear {
+    clear: both;
+}
+
+.spacer {
+    overflow: hidden;
+    height: 20px;
+    font-size: 0;
+    line-height: 0;
+}
+
+
+
+
+h1,h2,h3,h4,h5{
+	margin: 4px 0px;
+}
+
+
+.bold {
+	font-weight: 600;
+}
+
+.rowhead {
+	padding: 10px 18px;
+	border-bottom: 1px solid #111;
+	background: #06F;
+	color: #FFF;
+	height: 40px;
+}
+
+.rowbody{
+	padding: 0px 18px;
+	border-bottom: 1px solid #999;
+    line-height: 40px;
+}
+
+.rowbodychild{
+	padding: 0px 18px;
+	border-top: 1px solid #CCC;
+	background-color: #fff;
+}
+
+.odd{
+	background-color: #f9f9f9;
+}
+
+.modal-title{
+	font-weight: bold;
+	color: #337ab7;
+}
+
+
+dd {
+	margin-bottom: 4px;
+}
+
+dd {
+	margin-bottom: 20px;
+}

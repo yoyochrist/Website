@@ -1,0 +1,75 @@
+body
+   {  
+   background:#ffffff;
+   //background-image:url('ukrida_logo.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-family:calibri, Helvetica, sans-serif;
+   font-size: 100%;
+   //color:#5555ff;
+   margin: 0 auto;   /* this ensures full screen used up without margin at all */
+   }
+
+table
+  {
+  border-collapse: collapse;  
+  }
+
+  
+a {text-decoration:none; }
+
+a.achoice:link 
+   {
+   color:#dddddd; 
+   height:30px; 
+   width:200px; 
+   padding:10px 0px 0px 0px;
+   //padding-top:5px;
+   //padding-bottom:-15px;
+   background: linear-gradient( #bbeeff,#2222dd,#4455aa);
+   display:block;  
+   box-shadow:0px 0px 20px 5px #4455aa inset;   
+   border :solid 1px #005199;
+   border-radius: 20px 20px 20px 20px;
+   vertical-align:middle;
+   }
+a.achoice:visited {color:#dddddd; } 
+a.achoice:hover {color:#dddddd;   background: #ff0000; box-shadow:0px 0px 20px 5px #550000 inset;    } 
+a.achoice:active {color:#dddddd;  }  
+
+
+
+.submit_color
+   {
+   color:#dddddd;   
+   width:200px;
+   background: linear-gradient( #bbeeff,#2222dd,#4455aa); 
+   background: linear-gradient( #ffeebb,#ff22ss,#aa5544)
+   }
+   
+   
+.tablelogo
+   {
+   margin-top:-20px;
+   border-collapse: collapse;  
+   }
+   
+.logo
+  {
+  position : relative;
+  background:#f0f0f0;
+  //margin:20px 0px 20px 0px;
+  padding:20px;
+  text-align:center;  
+  height: 90px;
+  font-family:calibri;
+  font-size:25px;
+  color:#000000;
+  text-shadow: 1px 1px #ffffff;
+  box-shadow: 0px 0px 15px #555555;
+ }
+
+
+
+
+  

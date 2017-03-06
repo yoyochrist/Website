@@ -1,0 +1,180 @@
+/* CSS Document */
+
+div {
+	display: block;
+}
+
+.clear {
+	clear: both;
+}
+
+@media (min-width: 1400px) {
+	#banner, #wrapper_main, #footer {
+		max-width: 1170px;
+	}
+}
+
+#wrapper {
+	margin: 0px;
+	width: 100%;
+	min-height: 100%;
+}
+
+#wrapper_header {
+	width: 100%;
+	height: 95px;
+	background-color: #F5F5F5;
+	margin: 0px auto;
+}
+
+.box-shadow {
+	box-shadow: 3px 1px 5px #888888;
+}
+
+
+#wrapper_nav {
+	clear: both;
+	width: 100%;
+	box-shadow: 3px 1px 5px #888888;
+	margin: 0px auto;
+}
+
+
+
+#banner, #banner_adm {
+	margin:0 auto;
+	width: 90%;
+	height: 100%;
+}
+
+
+
+#wrapper_main, #wrapper_main_adm {
+	margin:0 auto;
+	width: 94%;
+	padding: 10px 0px;
+	overflow:auto;
+    padding-bottom: 40px;
+}
+
+
+
+#wrapper_footer {
+	clear: both;
+	width: 100%;
+	background: #F5F5F5;
+	margin-top: 20px;
+	padding: 0px;
+	box-shadow: 3px 1px 5px #888888;
+	position: relative;
+    height: 80px;
+
+}
+
+
+#footer {
+	width: 90%;
+	max-width: 900px;
+	margin: 0px auto;
+	padding: 10px;
+	border-width: medium;
+	text-align:center;
+}
+
+
+
+.nav {
+	margin:0px auto;
+	padding: 0px;
+	text-align:right;
+}
+
+#navi {
+	margin-top: 30px;
+}
+
+
+
+#webtitle{
+	display: inline-block;
+	width: auto;
+	float: left;
+	max-height: 100px;
+}
+
+#webnav{
+	display: inline-block;
+	width: 40%;
+	max-height: 100px;
+	float: right;
+	margin-top: 60px;
+	text-align: right;
+}
+
+
+table.figuretab {
+    background: #fff;
+    border-collapse: collapse;
+    border: 1px solid #bbb;
+    margin: 4px 0;
+    width: 100%;
+}
+
+table.figuretab thead {
+    background: linear-gradient(top, #eee 20%, #ddd 80%);
+    background: -moz-linear-gradient(top, #eee 20%, #ddd 80%);
+    background: #b8ccd9;
+    font-weight: normal;
+    text-align: center;
+}
+
+table.figuretab td, table.figuretab th {
+    border: 1px solid #bbb;
+    padding: 8px 5px;
+}
+
+
+textarea.figuretab {
+    background: #fff;
+    border-collapse: collapse;
+    border: 1px solid #bbb;
+    margin: 4px 0;
+	padding: 6px;
+	height: 100px;
+    width: 100%;
+}
+
+
+
+
+.featured-thumbnail {
+    float: left;
+    margin: 0px 10px 0px 0px;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+
+
+
+.step-box {
+    background: #f4f4f4;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    margin-top: 1%;
+    padding: 0px 30px 0px 30px;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+
+@media screen and (max-width:800px) {
+	
+	#webnav {
+		display: none;
+	}
+	
+}
+
+
+
+
